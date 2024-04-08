@@ -7,6 +7,10 @@ from bson import ObjectId
 
 router=APIRouter()
 
+# for default pages 
+@router.get("/")
+async def defautl_route():
+    return {"student mangement library"}
 
 # for get all students 
 @router.get("/students")
