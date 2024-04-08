@@ -6,11 +6,15 @@ from bson import ObjectId
 
 
 router=APIRouter()
+@router.head("/")
+async def head_route():
+
+    return {"X-Custom-Header": "Value"} 
 
 # for default pages 
-@router.get("/")
-async def defautl_route():
-    return {"student mangement library"}
+# @router.get("/")
+# async def defautl_route():
+#     return {"student mangement library"}
 
 # for get all students 
 @router.get("/students")
