@@ -1,7 +1,7 @@
 from pymongo import MongoClient
+import os
 
-uri = "mongodb+srv://harsh:77CGPM1vOMOhTl6i@cluster0.ns6blgf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
+uri =os.getenv("Mongo_url")
 client=MongoClient(uri)
 
 db=client.studentdb
